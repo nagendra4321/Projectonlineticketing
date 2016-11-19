@@ -25,11 +25,12 @@
         <tr>
             <td class="auto-style1">Category</td>
             <td>
-                <asp:DropDownList ID="ddlcategory" runat="server">
+                <asp:DropDownList ID="ddlcategory" runat="server" DataSourceID="categoryDataSource3" DataTextField="categoryname" DataValueField="categoryname">
                     <asp:ListItem>Sports</asp:ListItem>
                     <asp:ListItem>Meeting</asp:ListItem>
                     <asp:ListItem>Lecture</asp:ListItem>
                 </asp:DropDownList>
+                <asp:SqlDataSource ID="categoryDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:onlineticketingConnectionString %>" SelectCommand="SELECT [categoryname] FROM [eventcategory]"></asp:SqlDataSource>
             </td>
         </tr>
         <tr>

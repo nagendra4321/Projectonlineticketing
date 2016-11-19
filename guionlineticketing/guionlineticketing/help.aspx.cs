@@ -7,11 +7,10 @@ using System.Web.UI.WebControls;
 
 namespace guionlineticketing
 {
-    public partial class events : System.Web.UI.Page
+    public partial class help : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string eventid = Request.QueryString["event"];
             if (Session["UserID"] != null)
             {
                 ((Button)Master.FindControl("btn_signin")).Visible = false;
@@ -27,11 +26,6 @@ namespace guionlineticketing
                 ((HyperLink)Master.FindControl("username")).Visible = false;
                 ((Button)Master.FindControl("btnlogout")).Visible = false;
             }
-        }
-
-        protected void btnreserve_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("reservation.aspx");
         }
     }
 }

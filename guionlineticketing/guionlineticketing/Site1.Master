@@ -1,5 +1,7 @@
 <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="guionlineticketing.Site1" %>
 
+
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -21,7 +23,7 @@
             width: 1129px;
             margin-left: 0;
         }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -31,7 +33,9 @@
                 <header>
                     <div id="strapline">
                         <div id="welcome_slogan" class="auto-style2">
-                            <h3 class="auto-style3" >Online Ticketing System <asp:Button ID="btn_signin" runat="server" OnClick="btn_signin_Click" Text="Sign in" />
+                            <h3 class="auto-style3" >Online Ticketing System 
+                                <asp:Button ID="btnlogout" runat="server" OnClick="btnlogout_Click" Text="Logout" />
+                                <asp:Button ID="btn_signin" runat="server" OnClick="btn_signin_Click" Text="Sign in" />
                                 <asp:Button ID="btn_register" runat="server" OnClick="btn_register_Click" Text="Register" />
                                 <asp:HyperLink ID="username" runat="server" Font-Size="Larger" Text="user profile" NavigateUrl="~/profile.aspx"></asp:HyperLink>
                             </h3>
@@ -44,6 +48,7 @@
                                 <li><a href="Search.aspx">Search</a></li>
                                 <li><a href="NewEvents.aspx">New Events</a></li>
                                 <li><a href="Contactus.aspx">Contact Us</a></li>
+                                <li><a href="help.aspx">Help</a></li>
                             </ul>
                         </div>	
                     </nav>
@@ -64,9 +69,8 @@
 		                <div class="sidebar">
                             <div class="sidebar_item">
                                 <h2>Popular Events </h2>
-                                <h3>After Designing database and adding events we will show some popular events here like, Event promo Picture,Name,</h3>
-                                <h3>Timings</h3>
-                                <h3>&nbsp;and Location</h3>
+                                <p>
+                                    &nbsp;</p>
                                 <p>
                                     &nbsp;</p>
                             </div>

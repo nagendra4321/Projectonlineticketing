@@ -10,70 +10,43 @@
 namespace guionlineticketing {
     
     
-    public partial class addevent {
+    public partial class addlocation {
         
         /// <summary>
-        /// txteventmane control.
+        /// rblchoice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txteventmane;
+        protected global::System.Web.UI.WebControls.RadioButtonList rblchoice;
         
         /// <summary>
-        /// ddlcategory control.
+        /// tbllocation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlcategory;
+        protected global::System.Web.UI.WebControls.Table tbllocation;
         
         /// <summary>
-        /// categoryDataSource3 control.
+        /// txtlocationname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource categoryDataSource3;
+        protected global::System.Web.UI.WebControls.TextBox txtlocationname;
         
         /// <summary>
-        /// caldate control.
+        /// txtlocationaddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar caldate;
-        
-        /// <summary>
-        /// txttime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txttime;
-        
-        /// <summary>
-        /// ddllocation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddllocation;
-        
-        /// <summary>
-        /// SqlDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.TextBox txtlocationaddress;
         
         /// <summary>
         /// txtnoofseats control.
@@ -85,30 +58,39 @@ namespace guionlineticketing {
         protected global::System.Web.UI.WebControls.TextBox txtnoofseats;
         
         /// <summary>
-        /// txtfare control.
+        /// btnaddlocation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtfare;
+        protected global::System.Web.UI.WebControls.Button btnaddlocation;
         
         /// <summary>
-        /// imageupload control.
+        /// tblcategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload imageupload;
+        protected global::System.Web.UI.WebControls.Table tblcategory;
         
         /// <summary>
-        /// btnaddevent control.
+        /// txtcategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnaddevent;
+        protected global::System.Web.UI.WebControls.TextBox txtcategory;
+        
+        /// <summary>
+        /// btnaddcategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnaddcategory;
     }
 }

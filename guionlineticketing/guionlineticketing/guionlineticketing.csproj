@@ -98,7 +98,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="addlocation.aspx" />
     <Content Include="events.aspx" />
+    <Content Include="help.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -109,6 +111,7 @@
     <Content Include="reservation.aspx" />
     <Content Include="reservationconfirmation.aspx" />
     <Content Include="searchresults.aspx" />
+    <Content Include="test.Master" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -135,6 +138,7 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Search.aspx" />
     <Content Include="Signin.aspx" />
+    <Content Include="testform.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -147,6 +151,13 @@
     </Compile>
     <Compile Include="addevent.aspx.designer.cs">
       <DependentUpon>addevent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addlocation.aspx.cs">
+      <DependentUpon>addlocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addlocation.aspx.designer.cs">
+      <DependentUpon>addlocation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contactus.aspx.cs">
       <DependentUpon>Contactus.aspx</DependentUpon>
@@ -161,6 +172,13 @@
     </Compile>
     <Compile Include="events.aspx.designer.cs">
       <DependentUpon>events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="help.aspx.cs">
+      <DependentUpon>help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="help.aspx.designer.cs">
+      <DependentUpon>help.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewEvents.aspx.cs">
       <DependentUpon>NewEvents.aspx</DependentUpon>
@@ -219,6 +237,13 @@
     <Compile Include="Signin.aspx.designer.cs">
       <DependentUpon>Signin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -226,12 +251,19 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="test.Master.cs">
+      <DependentUpon>test.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="test.Master.designer.cs">
+      <DependentUpon>test.Master</DependentUpon>
+    </Compile>
+    <Compile Include="testform.aspx.cs">
+      <DependentUpon>testform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testform.aspx.designer.cs">
+      <DependentUpon>testform.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>
