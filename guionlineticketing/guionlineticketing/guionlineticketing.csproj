@@ -139,6 +139,7 @@
     <Content Include="Search.aspx" />
     <Content Include="Signin.aspx" />
     <Content Include="testform.aspx" />
+    <Content Include="testfrom2.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -264,6 +265,13 @@
     </Compile>
     <Compile Include="testform.aspx.designer.cs">
       <DependentUpon>testform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testfrom2.aspx.cs">
+      <DependentUpon>testfrom2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testfrom2.aspx.designer.cs">
+      <DependentUpon>testfrom2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>

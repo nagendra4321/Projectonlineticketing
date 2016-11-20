@@ -50,4 +50,26 @@
     
     
     
+    <br />
+    
+    
+    
+<asp:GridView ID="grdevents" runat="server" AutoGenerateColumns="False" DataKeyNames="id"   >
+    <Columns>
+        
+        <asp:BoundField HeaderText="id" DataField="id" InsertVisible="False" ReadOnly="True" SortExpression="id" Visible="false" />
+        <asp:BoundField HeaderText="Event Name" DataField="eventname" SortExpression="eventname" />
+        <asp:BoundField HeaderText="Event Category" DataField="eventcategory" SortExpression="eventcategory" />
+        <asp:BoundField HeaderText="Auditorium Name" DataField="auditoriumname" SortExpression="auditoriumname" />
+        <asp:BoundField HeaderText="Event Date" DataField="eventdate" SortExpression="eventdate" />
+        <asp:BoundField HeaderText="Fare " DataField="fare" SortExpression="fare" />
+        <asp:BoundField HeaderText="Seats Available" DataField="noofseats" SortExpression="noofseats" />
+        <asp:TemplateField HeaderText="view event">
+             <ItemTemplate>
+                <asp:Button ID="btnview" runat="server" text="view" OnClick="btnview_Click" CommandArgument='<%#Eval("id")%>' />
+             </ItemTemplate>
+        </asp:TemplateField>
+    </Columns>
+</asp:GridView>
+    <br />
 </asp:Content>

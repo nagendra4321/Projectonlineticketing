@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -31,7 +33,35 @@ namespace guionlineticketing
 
         protected void btn_search_Click(object sender, EventArgs e)
         {
-            Response.Redirect("searchresults.aspx");
+            DateTime date;
+            SqlCommand cmd;
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["onlineticketingConnectionString"].ConnectionString);
+            //SqlCommand cmd = new SqlCommand("SELECT [Bname], catname, [Author], [Edition], [Noofbooksavailable] FROM [tblbooks] b inner join tblcategory c on c.catid=b.catid WHERE ((b.[Catid] = " + ddlcategory.SelectedItem.Value + ") AND ([Bname] LIKE '%" + txtbookname.Text + "%') AND ([Author] LIKE '%" + txtauthorname.Text + "%'))", con);
+            if (Calendar1.SelectedDate.Date == DateTime.MinValue.Date)
+            {
+                cmd = new SqlCommand("select * from eventtable e inner join auditoriumtable a on e.auditoriumid=a.id where e.eventname like '%" + txteventname.Text + "%' and a.address like '%" + txtlocation.Text+"%'" , con);
+            }
+            else
+            {
+                date = Calendar1.SelectedDate;
+                cmd = new SqlCommand("select * from eventtable e inner join auditoriumtable a on e.auditoriumid=a.id where e.eventname like '%" + txteventname.Text + "%' and a.address like '%" + txtlocation.Text + "%' and e.eventdate='" + date.ToString("yyyy-MM-dd") + "'", con);
+            }
+            
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            grdevents.DataSource = dr;
+            grdevents.DataBind();
+            con.Close();
+
+            
+            //Response.Redirect("searchresults.aspx");
+        }
+
+        protected void btnview_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            int eventid = Convert.ToInt32(btn.CommandArgument);
+            Response.Redirect("events.aspx?event=" + eventid);
         }
     }
 }

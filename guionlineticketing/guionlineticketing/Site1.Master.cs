@@ -12,6 +12,25 @@ namespace guionlineticketing
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
+
+        }
+
+        protected void btn_signin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Signin.aspx");
+        }
+
+        protected void btn_register_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Register.aspx");
+
+        }
+
+        protected void btnlogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("index.aspx");
         }
     }
 }

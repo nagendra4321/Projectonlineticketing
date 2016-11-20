@@ -68,7 +68,7 @@
                             <div class="sidebar_item">
                                 <h2>Popular Events </h2>
                                 <p>
-                                    <asp:FormView ID="FormView1" runat="server" DataSourceID="testds">
+                                    <asp:FormView ID="FormView1" runat="server" DataSourceID="testds" AllowPaging="True">
                                         <EditItemTemplate>
                                             eventname:
                                             <asp:TextBox ID="eventnameTextBox" runat="server" Text='<%# Bind("eventname") %>' />
@@ -131,7 +131,10 @@
                                             <br />
                                             noofseats:
                                             <asp:Label ID="noofseatsLabel" runat="server" Text='<%# Bind("noofseats") %>' />
-                                            //<asp:HyperLink ID="HyperLink1" runat="server" Text='<%# events.aspxEval("id") %>'></asp:HyperLink>
+                                           
+                                            <br />
+                                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# String.Format("~/events.aspx?event={0}", Eval("id").ToString()) %>' Text="view"></asp:HyperLink>
+                                           
                                             <br />
 
                                         </ItemTemplate>

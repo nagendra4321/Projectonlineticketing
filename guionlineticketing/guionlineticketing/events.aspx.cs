@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -27,6 +29,20 @@ namespace guionlineticketing
                 ((HyperLink)Master.FindControl("username")).Visible = false;
                 ((Button)Master.FindControl("btnlogout")).Visible = false;
             }
+            string passedid = Request.QueryString["event"];
+            if(passedid==null)
+            {
+                Response.Redirect("index.aspx");
+            }
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["onlineticketingConnectionString"].ConnectionString);
+            //SqlCommand cmd = new SqlCommand("SELECT [Bname], catname, [Author], [Edition], [Noofbooksavailable] FROM [tblbooks] b inner join tblcategory c on c.catid=b.catid WHERE ((b.[Catid] = " + ddlcategory.SelectedItem.Value + ") AND ([Bname] LIKE '%" + txtbookname.Text + "%') AND ([Author] LIKE '%" + txtauthorname.Text + "%'))", con);
+            SqlCommand cmd = new SqlCommand("select * from eventtable e inner join auditoriumtable a on e.auditoriumid=a.id where e.id="+passedid, con);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            dtvevent.DataSource = dr;
+            dtvevent.DataBind();
+            con.Close();
+
         }
 
         protected void btnreserve_Click(object sender, EventArgs e)
