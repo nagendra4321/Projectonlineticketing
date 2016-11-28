@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
-        Thank you your reservation is succesfull</p>
+        Thank you! your reservation is succesfull</p>
     <p>
        Your  Confirmation Number:<asp:Label ID="lblconfirmationnumber" runat="server" Text="Confirmation Number"></asp:Label>
     </p>

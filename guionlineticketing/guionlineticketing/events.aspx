@@ -5,5 +5,5 @@
     <br />
     <asp:DetailsView ID="dtvevent" runat="server" Height="50px" Width="125px"  >
     </asp:DetailsView>
-    <asp:Button ID="btnreserve" runat="server" Text="Reserve" OnClick="btnreserve_Click" />
+    <asp:Button ID="btnreserve" runat="server" Text="Reserve" OnClick="btnreserve_Click" CommandArgument='<%#Eval("id")%>' />
     </asp:Content>

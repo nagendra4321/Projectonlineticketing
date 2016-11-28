@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="addlocation.aspx" />
+    <Content Include="adminindex.aspx" />
     <Content Include="events.aspx" />
     <Content Include="help.aspx" />
     <Content Include="packages.config" />
@@ -113,6 +114,7 @@
     <Content Include="searchresults.aspx" />
     <Content Include="test.Master" />
     <Content Include="Site1.Master" />
+    <Content Include="Admin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -159,6 +161,20 @@
     </Compile>
     <Compile Include="addlocation.aspx.designer.cs">
       <DependentUpon>addlocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="adminindex.aspx.cs">
+      <DependentUpon>adminindex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminindex.aspx.designer.cs">
+      <DependentUpon>adminindex.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contactus.aspx.cs">
       <DependentUpon>Contactus.aspx</DependentUpon>

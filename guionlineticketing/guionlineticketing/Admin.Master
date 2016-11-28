@@ -1,0 +1,196 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="guionlineticketing.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title>Online Ticketing Sysytem</title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2 {
+            width: 1048px;
+        }
+        .auto-style3 {
+            width: 1129px;
+            margin-left: 0;
+        }
+        .auto-style4 {
+            margin-bottom: 2;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+       
+            <div id="main">
+                <header>
+                    <div id="strapline">
+                        <div id="welcome_slogan" class="auto-style2">
+                            <h3 class="auto-style3" >Online Ticketing System 
+                                <asp:Button ID="btnlogout" runat="server" OnClick="btnlogout_Click" Text="Logout" CssClass="auto-style4" />
+                                <asp:Button ID="btn_signin" runat="server" OnClick="btn_signin_Click" Text="Sign in" />
+                                <asp:Button ID="btn_register" runat="server" OnClick="btn_register_Click" Text="Register" />
+                                <asp:HyperLink ID="username" runat="server" Font-Size="Larger" Text="user profile" NavigateUrl="~/profile.aspx" ForeColor="White"></asp:HyperLink>
+                            </h3>
+                        </div>
+                    </div>
+                    <nav>
+                        <div id="menubar">
+                            <ul id="nav">
+                                <li class="current"><a href="adminindex.aspx">Home</a></li>
+                                <li><a href="addevent.aspx">Add Event</a></li>
+                                <li><a href="addlocation.aspx">Add Location</a></li>
+                                <li><a href="Contactus.aspx">Contact Us</a></li>
+                                <li><a href="help.aspx">Help</a></li>
+                            </ul>
+                        </div>	
+                    </nav>
+                </header>
+                <div id="slideshow_container">
+                    <div class="slideshow">
+                        <ul class="slideshow">
+                            <li class="show">
+                                <img width="940" height="250" src="images/home_1.jpg" alt="&quot;Enter your caption here&quot;" /></li>
+                            <li>
+                                <img width="940" height="250" src="images/home_2.jpg" alt="&quot;Enter your caption here&quot;" /></li>
+                        </ul>
+                    </div>	
+	            </div>  
+	
+	            <div id="site_content">
+                    <div class="sidebar_container">  		
+		                <div class="sidebar">
+                            <div class="sidebar_item">
+                                <h2>Popular Events </h2>
+                                <p>
+                                    &nbsp;</p>
+                                <p>
+                                    <asp:FormView ID="FormView1" runat="server" DataSourceID="testds" AllowPaging="True"  DataKeyNames="id">
+                                        <EditItemTemplate>
+                                            id:
+                                            <asp:Label ID="idLabel1" runat="server" Text='<%# Eval("id") %>' />
+                                            <br />
+                                            eventname:
+                                            <asp:TextBox ID="eventnameTextBox" runat="server" Text='<%# Bind("eventname") %>' />
+                                            <br />
+                                            eventcategory:
+                                            <asp:TextBox ID="eventcategoryTextBox" runat="server" Text='<%# Bind("eventcategory") %>' />
+                                            <br />
+                                            auditoriumid:
+                                            <asp:TextBox ID="auditoriumidTextBox" runat="server" Text='<%# Bind("auditoriumid") %>' />
+                                            <br />
+                                            eventdate:
+                                            <asp:TextBox ID="eventdateTextBox" runat="server" Text='<%# Bind("eventdate") %>' />
+                                            <br />
+                                            eventtime:
+                                            <asp:TextBox ID="eventtimeTextBox" runat="server" Text='<%# Bind("eventtime") %>' />
+                                            <br />
+                                            noofseats:
+                                            <asp:TextBox ID="noofseatsTextBox" runat="server" Text='<%# Bind("noofseats") %>' />
+                                            <br />
+                                            fare:
+                                            <asp:TextBox ID="fareTextBox" runat="server" Text='<%# Bind("fare") %>' />
+                                            <br />
+                                            <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+                                            &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                                        </EditItemTemplate>
+                                        <InsertItemTemplate>
+                                            eventname:
+                                            <asp:TextBox ID="eventnameTextBox" runat="server" Text='<%# Bind("eventname") %>' />
+                                            <br />
+                                            eventcategory:
+                                            <asp:TextBox ID="eventcategoryTextBox" runat="server" Text='<%# Bind("eventcategory") %>' />
+                                            <br />
+                                            auditoriumid:
+                                            <asp:TextBox ID="auditoriumidTextBox" runat="server" Text='<%# Bind("auditoriumid") %>' />
+                                            <br />
+                                            eventdate:
+                                            <asp:TextBox ID="eventdateTextBox" runat="server" Text='<%# Bind("eventdate") %>' />
+                                            <br />
+                                            eventtime:
+                                            <asp:TextBox ID="eventtimeTextBox" runat="server" Text='<%# Bind("eventtime") %>' />
+                                            <br />
+                                            noofseats:
+                                            <asp:TextBox ID="noofseatsTextBox" runat="server" Text='<%# Bind("noofseats") %>' />
+                                            <br />
+                                            fare:
+                                            <asp:TextBox ID="fareTextBox" runat="server" Text='<%# Bind("fare") %>' />
+                                            <br />
+                                            <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                                            &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                                        </InsertItemTemplate>
+                                        <ItemTemplate>
+                                            id:
+                                            <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
+                                            <br />
+                                            eventname:
+                                            <asp:Label ID="eventnameLabel" runat="server" Text='<%# Bind("eventname") %>' />
+                                            <br />
+                                            eventcategory:
+                                            <asp:Label ID="eventcategoryLabel" runat="server" Text='<%# Bind("eventcategory") %>' />
+                                            <br />
+                                            auditoriumid:
+                                            <asp:Label ID="auditoriumidLabel" runat="server" Text='<%# Bind("auditoriumid") %>' />
+                                            <br />
+                                            eventdate:
+                                            <asp:Label ID="eventdateLabel" runat="server" Text='<%# Bind("eventdate") %>' />
+                                            <br />
+                                            eventtime:
+                                            <asp:Label ID="eventtimeLabel" runat="server" Text='<%# Bind("eventtime") %>' />
+                                           
+                                            <br />
+                                            
+                                            
+                                            noofseats:
+                                            <asp:Label ID="noofseatsLabel" runat="server" Text='<%# Bind("noofseats") %>' />
+                                            
+                                            
+                                            <br />
+
+                                            fare:
+                                            <asp:Label ID="fareLabel" runat="server" Text='<%# Bind("fare") %>' />
+                                            <br />
+                                            <br />
+                                            <asp:HyperLink ID="hplview" runat="server" NavigateUrl='<%# String.Format("~/events.aspx?event={0}", Eval("id").ToString()) %>' Text="View Event" />
+                                            <br />
+
+                                        </ItemTemplate>
+                                    </asp:FormView>
+                                    <asp:SqlDataSource ID="testds" runat="server" ConnectionString="<%$ ConnectionStrings:onlineticketingConnectionString %>" SelectCommand="SELECT [id], [eventname], [eventcategory], [auditoriumid], [eventdate], [eventtime], [noofseats], [fare] FROM [eventtable] ORDER BY [eventdate], [fare], [eventtime]"></asp:SqlDataSource>
+                                </p>
+                            </div>
+                        </div>
+		                <div class="sidebar">
+                            <div class="sidebar_item">
+                                <h3>&nbsp;</h3>
+                                <p>
+                                    &nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+	   
+	                <div id="content">
+                        <div class="content_item">
+                            
+                             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                             </asp:ContentPlaceHolder>
+                           
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                </footer>
+            </div>
+        
+    </div>
+    </form>
+</body>
+</html>

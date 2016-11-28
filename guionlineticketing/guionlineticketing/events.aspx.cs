@@ -30,7 +30,8 @@ namespace guionlineticketing
                 ((Button)Master.FindControl("btnlogout")).Visible = false;
             }
             string passedid = Request.QueryString["event"];
-            if(passedid==null)
+            Session["EventId"] = passedid;
+            if (passedid==null)
             {
                 Response.Redirect("index.aspx");
             }
@@ -47,7 +48,8 @@ namespace guionlineticketing
 
         protected void btnreserve_Click(object sender, EventArgs e)
         {
-            Response.Redirect("reservation.aspx");
+            
+            Response.Redirect("reservation.aspx?event="+ Session["EventId"].ToString());
         }
     }
 }

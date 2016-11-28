@@ -47,16 +47,23 @@ namespace guionlineticketing
                 Session["Name"] = name;
                 string id = dr["id"].ToString();
                 Session["UserID"] = id;
-                Response.Redirect("index.aspx");
+                if (Session["UserID"].ToString() == "admin")
+                {
+                    Response.Redirect("adminindex.aspx");
+                }
+                else
+                {
+                    Response.Redirect("index.aspx");
+                }
             }
-            if (Session["UserID"].ToString() == admin)
-            {
-                Response.Redirect("index.aspx");
-            }
-            else
-            {
-                Response.Redirect("index.aspx");
-            }
+            //if (Session["UserID"].ToString() == admin)
+            //{
+            //    Response.Redirect("index.aspx");
+            //}
+            //else
+            //{
+            //    Response.Redirect("index.aspx");
+            //}
 
         }
     }

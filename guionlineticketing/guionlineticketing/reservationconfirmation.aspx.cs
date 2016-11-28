@@ -24,6 +24,8 @@ namespace guionlineticketing
                 ((Button)Master.FindControl("btn_register")).Visible = true;
                 ((HyperLink)Master.FindControl("username")).Visible = false;
             }
+            string confirmationid = Request.QueryString["confirm"];
+            lblconfirmationnumber.Text = confirmationid;
         }
     }
 }

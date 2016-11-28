@@ -11,7 +11,17 @@ namespace guionlineticketing
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["UserID"] != null)
+            {
+                Response.Redirect("index.aspx");
+            }
+            else
+            {
+                ((Button)Master.FindControl("btn_signin")).Visible = true;
+                ((Button)Master.FindControl("btn_register")).Visible = false;
+                ((HyperLink)Master.FindControl("username")).Visible = false;
+                ((Button)Master.FindControl("btnlogout")).Visible = false;
+            }
         }
 
        

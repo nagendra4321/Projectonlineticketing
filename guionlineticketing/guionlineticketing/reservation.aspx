@@ -21,22 +21,34 @@
     <br />
     <table style="width:100%;">
         <tr>
+            <td class="auto-style5">User Id</td>
+            <td class="auto-style6">
+                <asp:Label ID="lbluserid" runat="server" Text="Guest"></asp:Label>
+            </td>
+        </tr>
+        <tr>
             <td class="auto-style4">Name</td>
             <td>
                 <asp:TextBox ID="txtname" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style4">Event</td>
-            <td>Event Name will be displayed here</td>
+            <td class="auto-style5">Event</td>
+            <td class="auto-style6">
+                <asp:Label ID="lbleventname" runat="server" Text="Label"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td class="auto-style4">Date</td>
-            <td>Event Date will be displayed here</td>
+            <td>
+                <asp:Label ID="lbleventdate" runat="server" Text="Label"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td class="auto-style5">Timing</td>
-            <td class="auto-style6">Event TIme will be displayed here</td>
+            <td class="auto-style6">
+                <asp:Label ID="lbleventtime" runat="server" Text="Label"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td class="auto-style4">Email</td>
@@ -87,5 +99,5 @@
         </tr>
     </table>
     <br />
-    <asp:Button ID="btnconfirm" runat="server" Text="Confirm Reservation" OnClick="btnconfirm_Click" />
+    <asp:Button ID="btnconfirm" runat="server" Text="Reserve" OnClick="btnconfirm_Click"  />
 </asp:Content>
