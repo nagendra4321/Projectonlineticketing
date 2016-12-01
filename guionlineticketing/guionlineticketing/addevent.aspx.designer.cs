@@ -22,6 +22,24 @@ namespace guionlineticketing {
         protected global::System.Web.UI.WebControls.TextBox txteventmane;
         
         /// <summary>
+        /// rfveventname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfveventname;
+        
+        /// <summary>
+        /// reveventname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator reveventname;
+        
+        /// <summary>
         /// ddlcategory control.
         /// </summary>
         /// <remarks>
@@ -38,6 +56,15 @@ namespace guionlineticketing {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource categoryDataSource3;
+        
+        /// <summary>
+        /// rfvcategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcategory;
         
         /// <summary>
         /// caldate control.
@@ -58,6 +85,24 @@ namespace guionlineticketing {
         protected global::System.Web.UI.WebControls.TextBox txttime;
         
         /// <summary>
+        /// rfvtime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtime;
+        
+        /// <summary>
+        /// revtime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revtime;
+        
+        /// <summary>
         /// ddllocation control.
         /// </summary>
         /// <remarks>
@@ -76,6 +121,15 @@ namespace guionlineticketing {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
+        /// rfvlocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvlocation;
+        
+        /// <summary>
         /// txtnoofseats control.
         /// </summary>
         /// <remarks>
@@ -85,6 +139,24 @@ namespace guionlineticketing {
         protected global::System.Web.UI.WebControls.TextBox txtnoofseats;
         
         /// <summary>
+        /// rfvseats control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvseats;
+        
+        /// <summary>
+        /// revnoofseats control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revnoofseats;
+        
+        /// <summary>
         /// txtfare control.
         /// </summary>
         /// <remarks>
@@ -92,6 +164,24 @@ namespace guionlineticketing {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtfare;
+        
+        /// <summary>
+        /// rfvfare control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvfare;
+        
+        /// <summary>
+        /// revfare control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revfare;
         
         /// <summary>
         /// imageupload control.
