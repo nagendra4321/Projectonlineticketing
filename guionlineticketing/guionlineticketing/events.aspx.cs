@@ -43,8 +43,16 @@ namespace guionlineticketing
             dtvevent.DataSource = dr;
             dtvevent.DataBind();
             con.Close();
+            int seats = Convert.ToInt32(dtvevent.Rows[4].Cells[1].Text);
+            DateTime eventdate = Convert.ToDateTime(dtvevent.Rows[2].Cells[1].Text);
+            if(eventdate<DateTime.Now || seats <=0 )
+            {
+                btnreserve.Enabled = false;
+                Session["EventId"] = null;
+                lblmsg.Text = "reservation date for this event is completed or no seats are available ";
+            }
 
-        }
+ }
 
         protected void btnreserve_Click(object sender, EventArgs e)
         {

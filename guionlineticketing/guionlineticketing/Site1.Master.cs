@@ -11,6 +11,7 @@ namespace guionlineticketing
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            DateTime timenow = DateTime.Now;
 
 
 

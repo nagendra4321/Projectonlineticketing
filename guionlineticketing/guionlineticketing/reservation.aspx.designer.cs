@@ -31,6 +31,24 @@ namespace guionlineticketing {
         protected global::System.Web.UI.WebControls.TextBox txtname;
         
         /// <summary>
+        /// rfvusername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvusername;
+        
+        /// <summary>
+        /// revname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revname;
+        
+        /// <summary>
         /// lbleventname control.
         /// </summary>
         /// <remarks>
@@ -67,6 +85,24 @@ namespace guionlineticketing {
         protected global::System.Web.UI.WebControls.TextBox txtemail;
         
         /// <summary>
+        /// rfvemail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvemail;
+        
+        /// <summary>
+        /// revemail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revemail;
+        
+        /// <summary>
         /// txtphonenum control.
         /// </summary>
         /// <remarks>
@@ -74,6 +110,24 @@ namespace guionlineticketing {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtphonenum;
+        
+        /// <summary>
+        /// rfvnumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvnumber;
+        
+        /// <summary>
+        /// revphonenum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revphonenum;
         
         /// <summary>
         /// txtcontactinfo control.
@@ -85,6 +139,24 @@ namespace guionlineticketing {
         protected global::System.Web.UI.WebControls.TextBox txtcontactinfo;
         
         /// <summary>
+        /// rfvaddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvaddress;
+        
+        /// <summary>
+        /// revaddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revaddress;
+        
+        /// <summary>
         /// txtcardname control.
         /// </summary>
         /// <remarks>
@@ -92,6 +164,24 @@ namespace guionlineticketing {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtcardname;
+        
+        /// <summary>
+        /// rfvcardname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcardname;
+        
+        /// <summary>
+        /// revcardname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revcardname;
         
         /// <summary>
         /// txtcardnumber control.
@@ -103,6 +193,24 @@ namespace guionlineticketing {
         protected global::System.Web.UI.WebControls.TextBox txtcardnumber;
         
         /// <summary>
+        /// rfvcardnumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcardnumber;
+        
+        /// <summary>
+        /// revcardnum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revcardnum;
+        
+        /// <summary>
         /// txtcvv control.
         /// </summary>
         /// <remarks>
@@ -112,6 +220,24 @@ namespace guionlineticketing {
         protected global::System.Web.UI.WebControls.TextBox txtcvv;
         
         /// <summary>
+        /// rfvcvv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcvv;
+        
+        /// <summary>
+        /// revcardnum0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revcardnum0;
+        
+        /// <summary>
         /// txtExpirationdate control.
         /// </summary>
         /// <remarks>
@@ -119,6 +245,24 @@ namespace guionlineticketing {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtExpirationdate;
+        
+        /// <summary>
+        /// rfvexpirationdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvexpirationdate;
+        
+        /// <summary>
+        /// rexexpdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator rexexpdate;
         
         /// <summary>
         /// btnconfirm control.

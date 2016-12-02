@@ -39,7 +39,7 @@ namespace guionlineticketing
             //SqlCommand cmd = new SqlCommand("SELECT [Bname], catname, [Author], [Edition], [Noofbooksavailable] FROM [tblbooks] b inner join tblcategory c on c.catid=b.catid WHERE ((b.[Catid] = " + ddlcategory.SelectedItem.Value + ") AND ([Bname] LIKE '%" + txtbookname.Text + "%') AND ([Author] LIKE '%" + txtauthorname.Text + "%'))", con);
             if (Calendar1.SelectedDate.Date == DateTime.MinValue.Date)
             {
-                cmd = new SqlCommand("select * from eventtable e inner join auditoriumtable a on e.auditoriumid=a.id where e.eventname like '%" + txteventname.Text + "%' and a.address like '%" + txtlocation.Text+"%'" , con);
+                cmd = new SqlCommand("select * from eventtable e inner join auditoriumtable a on e.auditoriumid=a.id where e.eventname like '%" + txteventname.Text + "%' and a.address like '%" + txtlocation.Text + "%'" , con);
             }
             else
             {

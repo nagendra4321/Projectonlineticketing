@@ -128,43 +128,42 @@
                                             &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                                         </InsertItemTemplate>
                                         <ItemTemplate>
-                                            id:
-                                            <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
-                                            <br />
-                                            eventname:
+                                            Event Name:
                                             <asp:Label ID="eventnameLabel" runat="server" Text='<%# Bind("eventname") %>' />
                                             <br />
-                                            eventcategory:
+                                            Event Category:
                                             <asp:Label ID="eventcategoryLabel" runat="server" Text='<%# Bind("eventcategory") %>' />
                                             <br />
-                                            auditoriumid:
-                                            <asp:Label ID="auditoriumidLabel" runat="server" Text='<%# Bind("auditoriumid") %>' />
+                                            Auditorium Name:
+                                            <asp:Label ID="auditoriumnameeLabel" runat="server" Text='<%# Bind("auditoriumname") %>' />
                                             <br />
-                                            eventdate:
+                                            Event Date:
                                             <asp:Label ID="eventdateLabel" runat="server" Text='<%# Bind("eventdate") %>' />
                                             <br />
-                                            eventtime:
+                                            Event Time:
                                             <asp:Label ID="eventtimeLabel" runat="server" Text='<%# Bind("eventtime") %>' />
+                                           
+                                            <br />
+                                             Event Location:
+                                            <asp:Label ID="address" runat="server" Text='<%# Bind("address") %>' />
                                            
                                             <br />
                                             
                                             
-                                            noofseats:
+                                            No Of Seats:
                                             <asp:Label ID="noofseatsLabel" runat="server" Text='<%# Bind("noofseats") %>' />
                                             
                                             
                                             <br />
 
-                                            fare:
+                                            Fare:
                                             <asp:Label ID="fareLabel" runat="server" Text='<%# Bind("fare") %>' />
-                                            <br />
                                             <br />
                                             <asp:HyperLink ID="hplview" runat="server" NavigateUrl='<%# String.Format("~/events.aspx?event={0}", Eval("id").ToString()) %>' Text="View Event" />
                                             <br />
-
                                         </ItemTemplate>
                                     </asp:FormView>
-                                    <asp:SqlDataSource ID="testds" runat="server" ConnectionString="<%$ ConnectionStrings:onlineticketingConnectionString %>" SelectCommand="SELECT [id], [eventname], [eventcategory], [auditoriumid], [eventdate], [eventtime], [noofseats], [fare] FROM [eventtable] ORDER BY [eventdate], [fare], [eventtime]"></asp:SqlDataSource>
+                                    <asp:SqlDataSource ID="testds" runat="server" ConnectionString="<%$ ConnectionStrings:onlineticketingConnectionString %>" SelectCommand="select * from eventtable e inner join auditoriumtable a on e.auditoriumid=a.id where e.eventdate>GETDATE()"></asp:SqlDataSource>
                                 </p>
                             </div>
                         </div>

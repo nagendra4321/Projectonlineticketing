@@ -100,6 +100,7 @@
   <ItemGroup>
     <Content Include="addlocation.aspx" />
     <Content Include="adminindex.aspx" />
+    <Content Include="cancelreservation.aspx" />
     <Content Include="events.aspx" />
     <Content Include="help.aspx" />
     <Content Include="packages.config" />
@@ -175,6 +176,13 @@
     </Compile>
     <Compile Include="adminindex.aspx.designer.cs">
       <DependentUpon>adminindex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cancelreservation.aspx.cs">
+      <DependentUpon>cancelreservation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cancelreservation.aspx.designer.cs">
+      <DependentUpon>cancelreservation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contactus.aspx.cs">
       <DependentUpon>Contactus.aspx</DependentUpon>

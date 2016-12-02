@@ -30,6 +30,10 @@ namespace guionlineticketing
                 ((HyperLink)Master.FindControl("username")).Visible = false;
                 ((Button)Master.FindControl("btnlogout")).Visible = false;
             }
+            if(Session["EventId"]==null)
+            {
+                Response.Redirect("index.aspx");
+            }
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["onlineticketingConnectionString"].ConnectionString);
             string cmd = "select * from eventtable where id="+ Session["EventId"].ToString();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd, con);
