@@ -32,9 +32,9 @@
                     <div id="strapline">
                         <div id="welcome_slogan" class="auto-style2">
                             <h3 class="auto-style3" >Online Ticketing System 
-                                <asp:Button ID="btnlogout" runat="server" OnClick="btnlogout_Click" Text="Logout" />
-                                <asp:Button ID="btn_signin" runat="server" OnClick="btn_signin_Click" Text="Sign in" />
-                                <asp:Button ID="btn_register" runat="server" OnClick="btn_register_Click" Text="Register" />
+                                <asp:Button ID="btnlogout" runat="server" OnClick="btnlogout_Click" CausesValidation="false" Text="Logout" />
+                                <asp:Button ID="btn_signin" runat="server" OnClick="btn_signin_Click" CausesValidation="false" Text="Sign in" />
+                                <asp:Button ID="btn_register" runat="server" OnClick="btn_register_Click" CausesValidation="false" Text="Register" />
                                 <asp:HyperLink ID="username" runat="server" Font-Size="Larger" Text="user profile" NavigateUrl="~/profile.aspx"></asp:HyperLink>
                             </h3>
                         </div>

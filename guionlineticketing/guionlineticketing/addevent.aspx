@@ -64,7 +64,7 @@
             <td>
                 <asp:TextBox ID="txtnoofseats" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvseats" runat="server" ControlToValidate="txtnoofseats" ErrorMessage="Enter no of seats" SetFocusOnError="True"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="revnoofseats" runat="server" ControlToValidate="txtnoofseats" ErrorMessage="Enter number of seats as number format" SetFocusOnError="True" ValidationExpression="\d{3}"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="revnoofseats" runat="server" ControlToValidate="txtnoofseats" ErrorMessage="Enter number of seats as number format" SetFocusOnError="True" ValidationExpression="^[0-9]{1,3}$"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
@@ -72,7 +72,7 @@
             <td>
                 <asp:TextBox ID="txtfare" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvfare" runat="server" ControlToValidate="txtfare" ErrorMessage="Enter fare amount" SetFocusOnError="True"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="revfare" runat="server" ControlToValidate="txtfare" ErrorMessage="enter fare in number format" SetFocusOnError="True" ValidationExpression="/^[+]?([0-9]+(?:[\.][0-9]*)?|\.[0-9]+)$/"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="revfare" runat="server" ControlToValidate="txtfare" ErrorMessage="enter fare in number format" SetFocusOnError="True" ValidationExpression="^[+]?([0-9]+(?:[\.][0-9]*)?|\.[0-9]+)$"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
@@ -85,7 +85,9 @@
             <td class="auto-style2">
                 <asp:Button ID="btnaddevent" runat="server" Text="Add Event" OnClick="btnaddevent_Click" />
             </td>
-            <td class="auto-style3"></td>
+            <td class="auto-style3">
+                <asp:Label ID="lblmsg" runat="server"></asp:Label>
+            </td>
         </tr>
     </table>
 </asp:Content>

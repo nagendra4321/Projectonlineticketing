@@ -13,6 +13,15 @@ namespace guionlineticketing {
     public partial class Signin {
         
         /// <summary>
+        /// pnlDefault control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlDefault;
+        
+        /// <summary>
         /// txtusername control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace guionlineticketing {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtpassword;
+        
+        /// <summary>
+        /// lblmsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmsg;
         
         /// <summary>
         /// btnlogin control.

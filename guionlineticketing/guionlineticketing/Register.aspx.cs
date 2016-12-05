@@ -24,6 +24,7 @@ namespace guionlineticketing
                 ((HyperLink)Master.FindControl("username")).Visible = false;
                 ((Button)Master.FindControl("btnlogout")).Visible = false;
             }
+            lblmsg.Text = " ";
         }
 
         protected void btnsubmit_Click(object sender, EventArgs e)
@@ -34,6 +35,15 @@ namespace guionlineticketing
             con.Open();
             int i = cmdsubmit.ExecuteNonQuery();
             con.Close();
+            lblmsg.Text = "user with username: " + txtid.Text.ToString() + " has been created";
+            txtid.Text = null;
+            txtdob.Text = null;
+            txtemail.Text = null;
+            txtphonenumber.Text = null;
+            txtsecans.Text = null;
+            txtaddress.Text = null;
+            txtname.Text = null;
+
         }
     }
 }

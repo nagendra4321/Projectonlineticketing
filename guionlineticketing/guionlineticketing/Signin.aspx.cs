@@ -29,6 +29,7 @@ namespace guionlineticketing
                 ((HyperLink)Master.FindControl("username")).Visible = false;
                 ((Button)Master.FindControl("btnlogout")).Visible = false;
             }
+            lblmsg.Text = null;
 
         }
 
@@ -55,6 +56,10 @@ namespace guionlineticketing
                 {
                     Response.Redirect("index.aspx");
                 }
+            }
+            else
+            {
+                lblmsg.Text = "username or password is invalid please try again";
             }
             //if (Session["UserID"].ToString() == admin)
             //{

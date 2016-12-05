@@ -50,6 +50,10 @@
     
     
     
+    <asp:Label ID="lblmsg" runat="server" Text="Label"></asp:Label>
+    
+    
+    
     <br />
     
     

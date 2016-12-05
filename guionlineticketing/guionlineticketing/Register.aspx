@@ -155,7 +155,9 @@
                 <td class="auto-style4">
                     <asp:Button ID="btnsubmit" runat="server" Text="Submit" OnClick="btnsubmit_Click" />
                 </td>
-                <td class="auto-style5">&nbsp;</td>
+                <td class="auto-style5">
+                    <asp:Label ID="lblmsg" runat="server"></asp:Label>
+                </td>
             </tr>
         </table>
 </asp:Content>

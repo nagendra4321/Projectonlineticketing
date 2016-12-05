@@ -43,6 +43,11 @@
                     <asp:Button ID="btnaddlocation" runat="server" Text="Add Location" OnClick="btnaddlocation_Click" />
                 </asp:TableCell>
             </asp:TableRow>
+                <asp:TableRow runat="server" class="auto-style8">
+                <asp:TableCell runat="server">
+                    <asp:Label ID="lblmsglocation" Text="" runat="server"></asp:Label>
+                </asp:TableCell>
+            </asp:TableRow>
         </asp:Table>
 
     
@@ -62,6 +67,11 @@
             <asp:TableRow runat="server" class="auto-style8">
                 <asp:TableCell runat="server">
                      <asp:Button ID="btnaddcategory" runat="server" Text="Add Category" OnClick="btnaddcategory_Click" />
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow runat="server" class="auto-style8">
+                <asp:TableCell runat="server">
+                    <asp:Label ID="lblmsgcategory" Text="" runat="server"></asp:Label>
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>

@@ -67,6 +67,15 @@ namespace guionlineticketing {
         protected global::System.Web.UI.WebControls.Button btnaddlocation;
         
         /// <summary>
+        /// lblmsglocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmsglocation;
+        
+        /// <summary>
         /// tblcategory control.
         /// </summary>
         /// <remarks>
@@ -92,5 +101,14 @@ namespace guionlineticketing {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnaddcategory;
+        
+        /// <summary>
+        /// lblmsgcategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmsgcategory;
     }
 }

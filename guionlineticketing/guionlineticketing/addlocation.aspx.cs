@@ -27,6 +27,7 @@ namespace guionlineticketing
                 ((Button)Master.FindControl("btnlogout")).Visible = false;
                 Response.Redirect("Signin.aspx");
             }
+            
             if (rblchoice.SelectedItem.Value == "location")
             {
                 tbllocation.Visible = true;
@@ -64,6 +65,10 @@ namespace guionlineticketing
             con.Open();
             int i = cmdsubmit.ExecuteNonQuery();
             con.Close();
+            lblmsglocation.Text = "Location " + txtlocationname.Text.ToString() + " has been succesfully added to database";
+            txtlocationname.Text = null;
+            txtnoofseats.Text = null;
+            txtlocationaddress.Text = null;
         }
 
         protected void btnaddcategory_Click(object sender, EventArgs e)
@@ -75,6 +80,8 @@ namespace guionlineticketing
             con.Open();
             int i = cmdsubmit.ExecuteNonQuery();
             con.Close();
+            lblmsgcategory.Text = "category " + txtcategory.Text.ToString() + " succesfully added to database";
+            txtcategory.Text = null;
         }
     }
 }

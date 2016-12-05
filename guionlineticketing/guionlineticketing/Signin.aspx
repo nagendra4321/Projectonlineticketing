@@ -34,6 +34,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
+    <asp:Panel ID="pnlDefault" runat="server" DefaultButton="btnlogin">
     <table align="left" >
         <tr>
             <td colspan="2" align="center" class="auto-style7">Log In</td>
@@ -52,7 +53,9 @@
         </tr>
         <tr>
             <td class="auto-style6"></td>
-            <td class="auto-style11"></td>
+            <td class="auto-style11">
+                <asp:Label ID="lblmsg" runat="server" Text="Label"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td class="auto-style6">&nbsp;</td>
@@ -61,5 +64,6 @@
             </td>
         </tr>
     </table>
+        </asp:Panel>
     <br />
 </asp:Content>

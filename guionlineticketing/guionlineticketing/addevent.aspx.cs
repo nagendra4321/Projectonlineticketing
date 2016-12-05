@@ -27,6 +27,7 @@ namespace guionlineticketing
                 ((Button)Master.FindControl("btnlogout")).Visible = false;
                 Response.Redirect("Signin.aspx");
             }
+            lblmsg.Text = " ";
 
         }
 
@@ -40,6 +41,12 @@ namespace guionlineticketing
             con.Open();
             int i = cmdsubmit.ExecuteNonQuery();
             con.Close();
+            lblmsg.Text = "Event " + txteventmane.Text.ToString() + " has been created";
+            txteventmane.Text = null;
+            txtfare.Text = null;
+            txtnoofseats.Text = null;
+            txttime.Text = null;
+            caldate.SelectedDate = DateTime.Now;
         }
 
         protected void imageupload_Load(object sender, EventArgs e)

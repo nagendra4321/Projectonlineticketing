@@ -28,13 +28,14 @@ namespace guionlineticketing
                 ((HyperLink)Master.FindControl("username")).Visible = false;
                 ((Button)Master.FindControl("btnlogout")).Visible = false;
             }
-
+            lblmsg.Text = null;
         }
 
         protected void btn_search_Click(object sender, EventArgs e)
         {
             DateTime date;
             SqlCommand cmd;
+            lblmsg.Text = "Search results are";
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["onlineticketingConnectionString"].ConnectionString);
             //SqlCommand cmd = new SqlCommand("SELECT [Bname], catname, [Author], [Edition], [Noofbooksavailable] FROM [tblbooks] b inner join tblcategory c on c.catid=b.catid WHERE ((b.[Catid] = " + ddlcategory.SelectedItem.Value + ") AND ([Bname] LIKE '%" + txtbookname.Text + "%') AND ([Author] LIKE '%" + txtauthorname.Text + "%'))", con);
             if (Calendar1.SelectedDate.Date == DateTime.MinValue.Date)

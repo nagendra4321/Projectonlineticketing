@@ -26,6 +26,14 @@ namespace guionlineticketing
                 ((HyperLink)Master.FindControl("username")).Visible = false;
                 ((Button)Master.FindControl("btnlogout")).Visible = false;
             }
+            if (Session["UserID"] != null)
+            {
+                lblmsg.Text = "Succesfully loggedd in as" + Session["UserID"].ToString() + " .";
+            }
+            else
+            {
+                lblmsg.Text = "";
+            }
         }
     }
 }
