@@ -32,7 +32,7 @@ namespace guionlineticketing
             if (!Page.IsPostBack)
             {
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["onlineticketingConnectionString"].ConnectionString);
-                SqlCommand cmd = new SqlCommand("select r.id,e.eventcategory,e.eventname,e.eventdate,e.eventname,e.eventtime,e.fare,a.auditoriumname,a.address from reservationtable r inner join eventtable e on r.userid='" + Session["UserId"].ToString() + "' and r.eventid=e.id  inner join auditoriumtable a on e.auditoriumid=a.id where e.eventdate>GETDATE() and r.reservation='reserved'", con);
+                SqlCommand cmd = new SqlCommand("select r.id,e.eventcategory,e.eventname,CONVERT(VARCHAR(10), e.eventdate, 111) as eventdate,e.eventname,e.eventtime,e.fare,a.auditoriumname,a.address from reservationtable r inner join eventtable e on r.userid='" + Session["UserId"].ToString() + "' and r.eventid=e.id  inner join auditoriumtable a on e.auditoriumid=a.id where e.eventdate>GETDATE() and r.reservation='reserved'", con);
                 con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 grdcancelreservation.DataSource = dr;

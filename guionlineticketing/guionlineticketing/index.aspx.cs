@@ -28,7 +28,7 @@ namespace guionlineticketing
             }
             if (Session["UserID"] != null)
             {
-                lblmsg.Text = "Succesfully loggedd in as" + Session["UserID"].ToString() + " .";
+                lblmsg.Text = "Succesfully logged in as " + Session["UserID"].ToString() + " .";
             }
             else
             {

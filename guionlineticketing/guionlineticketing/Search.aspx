@@ -18,8 +18,8 @@
     <table style="width:100%;">
         <tr>
             <td class="auto-style6" >
-                <asp:Label ID="lbl_eventname" runat="server" Text="Event Name or Category"></asp:Label>
-            &nbsp;</td>
+                <asp:Label ID="lbl_eventname" runat="server" Text="Event Name "></asp:Label>
+            </td>
             <td>
                 <asp:TextBox ID="txteventname" runat="server"></asp:TextBox>
             </td>

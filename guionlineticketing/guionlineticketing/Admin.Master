@@ -163,7 +163,7 @@
                                             <br />
                                         </ItemTemplate>
                                     </asp:FormView>
-                                    <asp:SqlDataSource ID="testds" runat="server" ConnectionString="<%$ ConnectionStrings:onlineticketingConnectionString %>" SelectCommand="select * from eventtable e inner join auditoriumtable a on e.auditoriumid=a.id where e.eventdate>GETDATE()"></asp:SqlDataSource>
+                                    <asp:SqlDataSource ID="testds" runat="server" ConnectionString="<%$ ConnectionStrings:onlineticketingConnectionString %>" SelectCommand="select e.id,e.eventname,e.eventcategory,a.auditoriumname,CONVERT(VARCHAR(10), e.eventdate, 111) as eventdate,e.eventtime,e.fare,e.noofseats,a.address from eventtable e inner join auditoriumtable a on e.auditoriumid=a.id where e.eventdate>GETDATE()"></asp:SqlDataSource>
                                 </p>
                             </div>
                         </div>

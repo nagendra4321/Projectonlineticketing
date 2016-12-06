@@ -112,8 +112,6 @@
     <Content Include="profile.aspx" />
     <Content Include="reservation.aspx" />
     <Content Include="reservationconfirmation.aspx" />
-    <Content Include="searchresults.aspx" />
-    <Content Include="test.Master" />
     <Content Include="Site1.Master" />
     <Content Include="Admin.Master" />
     <None Include="Web.Debug.config">
@@ -141,8 +139,6 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Search.aspx" />
     <Content Include="Signin.aspx" />
-    <Content Include="testform.aspx" />
-    <Content Include="testfrom2.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -248,13 +244,6 @@
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
     </Compile>
-    <Compile Include="searchresults.aspx.cs">
-      <DependentUpon>searchresults.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="searchresults.aspx.designer.cs">
-      <DependentUpon>searchresults.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Signin.aspx.cs">
       <DependentUpon>Signin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -275,27 +264,6 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
-    <Compile Include="test.Master.cs">
-      <DependentUpon>test.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="test.Master.designer.cs">
-      <DependentUpon>test.Master</DependentUpon>
-    </Compile>
-    <Compile Include="testform.aspx.cs">
-      <DependentUpon>testform.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="testform.aspx.designer.cs">
-      <DependentUpon>testform.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="testfrom2.aspx.cs">
-      <DependentUpon>testfrom2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="testfrom2.aspx.designer.cs">
-      <DependentUpon>testfrom2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>

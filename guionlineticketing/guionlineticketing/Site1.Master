@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+ 
 <head runat="server">
 
     <title>Online Ticketing Sysytem</title>
@@ -25,6 +26,19 @@
         }
         </style>
 </head>
+    <script runat="server">
+        protected String getindex()
+        {
+            if(Session["UserId"]!=null && Session["UserId"].ToString() =="admin")
+            {
+                return "adminindex.aspx";
+            }
+            else
+            {
+                return "index.aspx";
+            }
+        }
+</script>
 <body>
     <form id="form1" runat="server">
     <div>
@@ -44,7 +58,7 @@
                     <nav>
                         <div id="menubar">
                             <ul id="nav">
-                                <li class="current"><a href="index.aspx">Home</a></li>
+                                <li class="current"><a href="<% =getindex()%>">Home</a></li>
                                 <li><a href="Search.aspx">Search</a></li>
                                 <li><a href="NewEvents.aspx">New Events</a></li>
                                 <li><a href="Contactus.aspx">Contact Us</a></li>
@@ -164,7 +178,7 @@
 
                                         </ItemTemplate>
                                     </asp:FormView>
-                                    <asp:SqlDataSource ID="testds" runat="server" ConnectionString="<%$ ConnectionStrings:onlineticketingConnectionString %>" SelectCommand="select * from eventtable e inner join auditoriumtable a on e.auditoriumid=a.id where e.eventdate>GETDATE()"></asp:SqlDataSource>
+                                    <asp:SqlDataSource ID="testds" runat="server" ConnectionString="<%$ ConnectionStrings:onlineticketingConnectionString %>" SelectCommand="select e.id,e.eventname,e.eventcategory,a.auditoriumname,CONVERT(VARCHAR(10), e.eventdate, 111) as eventdate,e.eventtime,e.fare,e.noofseats,a.address from eventtable e inner join auditoriumtable a on e.auditoriumid=a.id where e.eventdate>GETDATE()"></asp:SqlDataSource>
                                 </p>
                             </div>
                         </div>

@@ -25,7 +25,7 @@ namespace guionlineticketing
                 ((Button)Master.FindControl("btnlogout")).Visible = false;
                 Response.Redirect("Signin.aspx");
             }
-            lblmsg.Text = "Succesfully loggedd in as" + Session["UserID"].ToString() + " .";
+            lblmsg.Text = "Succesfully logged in as " + Session["UserID"].ToString() + " .";
         }
     }
 }

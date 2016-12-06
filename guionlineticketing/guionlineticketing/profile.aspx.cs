@@ -31,7 +31,7 @@ namespace guionlineticketing
             SqlCommand cmd;
             string query = "select e.eventcategory,e.eventname,e.eventdate,e.eventname,e.eventtime,e.fare,a.auditoriumname,a.address from reservationtable r inner"
                 +"join eventtable e on r.userid='" + Session["UserId"].ToString() + "' and r.eventid=e.id inner join auditoriumtable a on e.auditoriumid=a.id";
-            cmd = new SqlCommand("select e.eventcategory,e.eventname,e.eventdate,e.eventname,e.eventtime,e.fare,a.auditoriumname,a.address from reservationtable r inner join eventtable e on r.userid='"+ Session["UserId"].ToString() + "' and r.eventid=e.id inner join auditoriumtable a on e.auditoriumid=a.id", con);
+            cmd = new SqlCommand("select e.eventcategory as Event_Category,e.eventname as Name,CONVERT(VARCHAR(10), e.eventdate, 111) as Date,e.eventtime as TIme,e.fare as Fare,a.auditoriumname as Venue,a.address as Address from reservationtable r inner join eventtable e on r.userid='" + Session["UserId"].ToString() + "' and r.eventid=e.id inner join auditoriumtable a on e.auditoriumid=a.id", con);
             con.Open();
             SqlDataReader dr = cmd.ExecuteReader();
             grdorders.DataSource = dr;
@@ -60,7 +60,7 @@ namespace guionlineticketing
             grdpastevents.Visible = false;
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["onlineticketingConnectionString"].ConnectionString);
             SqlCommand cmd;
-           cmd = new SqlCommand("select e.eventcategory,e.eventname,e.eventdate,e.eventname,e.eventtime,e.fare,a.auditoriumname,a.address from reservationtable r inner join eventtable e on r.userid='" + Session["UserId"].ToString() + "' and r.eventid=e.id inner join auditoriumtable a on e.auditoriumid=a.id  where e.eventdate < GETDATE() and r.reservation='reserved'", con);
+           cmd = new SqlCommand("select e.eventcategory as Event_Category,e.eventname as Name,CONVERT(VARCHAR(10), e.eventdate, 111) as Date,e.eventtime as TIme,e.fare as Fare,a.auditoriumname as Venue,a.address as Address from reservationtable r inner join eventtable e on r.userid='" + Session["UserId"].ToString() + "' and r.eventid=e.id inner join auditoriumtable a on e.auditoriumid=a.id  where e.eventdate > GETDATE() and r.reservation='reserved'", con);
             con.Open();
             SqlDataReader dr = cmd.ExecuteReader();
             grdactive.DataSource = dr;
@@ -76,7 +76,7 @@ namespace guionlineticketing
             grdpastevents.Visible = true;
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["onlineticketingConnectionString"].ConnectionString);
             SqlCommand cmd;
-           cmd = new SqlCommand("select e.eventcategory,e.eventname,e.eventdate,e.eventname,e.eventtime,e.fare,a.auditoriumname,a.address from reservationtable r inner join eventtable e on r.userid='" + Session["UserId"].ToString() + "' and r.eventid=e.id inner join auditoriumtable a on e.auditoriumid=a.id where e.eventdate < GETDATE()", con);
+           cmd = new SqlCommand("select e.eventcategory as Event_Category,e.eventname as Name,CONVERT(VARCHAR(10), e.eventdate, 111) as Date,e.eventtime as TIme,e.fare as Fare,a.auditoriumname as Venue,a.address as Address from reservationtable r inner join eventtable e on r.userid='" + Session["UserId"].ToString() + "' and r.eventid=e.id inner join auditoriumtable a on e.auditoriumid=a.id where e.eventdate < GETDATE()", con);
             con.Open();
             SqlDataReader dr = cmd.ExecuteReader();
             grdpastevents.DataSource = dr;
@@ -92,7 +92,7 @@ namespace guionlineticketing
             grdpastevents.Visible = false;
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["onlineticketingConnectionString"].ConnectionString);
             SqlCommand cmd;
-            cmd = new SqlCommand("select e.eventcategory,e.eventname,e.eventdate,e.eventname,e.eventtime,e.fare,a.auditoriumname,a.address from reservationtable r inner join eventtable e on r.userid='" + Session["UserId"].ToString() + "' and r.eventid=e.id inner join auditoriumtable a on e.auditoriumid=a.id where r.reservation='cancelled'", con);
+            cmd = new SqlCommand("select e.eventcategory as Event_Category,e.eventname as Name,CONVERT(VARCHAR(10), e.eventdate, 111) as Date,e.eventtime as TIme,e.fare as Fare,a.auditoriumname as Venue,a.address as Address from reservationtable r inner join eventtable e on r.userid='" + Session["UserId"].ToString() + "' and r.eventid=e.id inner join auditoriumtable a on e.auditoriumid=a.id where r.reservation='cancelled'", con);
             con.Open();
             SqlDataReader dr = cmd.ExecuteReader();
             grdcancelled.DataSource = dr;
