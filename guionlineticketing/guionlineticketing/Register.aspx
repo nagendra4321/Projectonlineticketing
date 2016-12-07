@@ -47,7 +47,7 @@
                 <td class="auto-style4">New Password</td>
                 <td class="auto-style17">
                     <asp:TextBox ID="txtnewpass" runat="server" TextMode="Password"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvnewpass" ValidationGroup="submit" runat="server" ErrorMessage="enter new password" ControlToValidate="txtnewpass" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvnewpass" ValidationGroup="submit" runat="server" ErrorMessage="Enter new password" ControlToValidate="txtnewpass" SetFocusOnError="True"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -66,7 +66,7 @@
                         <asp:ListItem>male</asp:ListItem>
                         <asp:ListItem>female</asp:ListItem>
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="rfvgender" runat="server" ErrorMessage="select a gender" ValidationGroup="submit" ControlToValidate="ddlgender" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvgender" runat="server" ErrorMessage="Select a gender" ValidationGroup="submit" ControlToValidate="ddlgender" SetFocusOnError="True"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -87,7 +87,7 @@
                         <asp:ListItem>29</asp:ListItem>
                         <asp:ListItem>30</asp:ListItem>
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="rfvselectage" runat="server" ValidationGroup="submit" ErrorMessage="select age" ControlToValidate="ddlage" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvselectage" runat="server" ValidationGroup="submit" ErrorMessage="Select age" ControlToValidate="ddlage" SetFocusOnError="True"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>

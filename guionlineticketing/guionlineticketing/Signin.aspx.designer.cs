@@ -31,6 +31,15 @@ namespace guionlineticketing {
         protected global::System.Web.UI.WebControls.TextBox txtusername;
         
         /// <summary>
+        /// rfvid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvid;
+        
+        /// <summary>
         /// txtpassword control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace guionlineticketing {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtpassword;
+        
+        /// <summary>
+        /// rfvnewpass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvnewpass;
         
         /// <summary>
         /// lblmsg control.
