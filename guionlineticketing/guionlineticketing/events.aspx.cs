@@ -35,24 +35,32 @@ namespace guionlineticketing
             {
                 Response.Redirect("index.aspx");
             }
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["onlineticketingConnectionString"].ConnectionString);
-            //SqlCommand cmd = new SqlCommand("SELECT [Bname], catname, [Author], [Edition], [Noofbooksavailable] FROM [tblbooks] b inner join tblcategory c on c.catid=b.catid WHERE ((b.[Catid] = " + ddlcategory.SelectedItem.Value + ") AND ([Bname] LIKE '%" + txtbookname.Text + "%') AND ([Author] LIKE '%" + txtauthorname.Text + "%'))", con);
-            SqlCommand cmd = new SqlCommand("select e.id,e.eventname,e.eventcategory,a.auditoriumname,CONVERT(VARCHAR(10), e.eventdate, 111) as eventdate,e.eventtime,e.fare,e.noofseats,a.address from eventtable e inner join auditoriumtable a on e.auditoriumid=a.id where e.id=" + passedid, con);
-            con.Open();
-            SqlDataReader dr = cmd.ExecuteReader();
-            dtvevent.DataSource = dr;
-            dtvevent.DataBind();
-            con.Close();
-            int seats = Convert.ToInt32(dtvevent.Rows[4].Cells[1].Text);
-            DateTime eventdate = Convert.ToDateTime(dtvevent.Rows[2].Cells[1].Text);
-            if(eventdate<DateTime.Now || seats <=0 )
+            try
+                {
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["onlineticketingConnectionString"].ConnectionString);
+                //SqlCommand cmd = new SqlCommand("SELECT [Bname], catname, [Author], [Edition], [Noofbooksavailable] FROM [tblbooks] b inner join tblcategory c on c.catid=b.catid WHERE ((b.[Catid] = " + ddlcategory.SelectedItem.Value + ") AND ([Bname] LIKE '%" + txtbookname.Text + "%') AND ([Author] LIKE '%" + txtauthorname.Text + "%'))", con);
+                SqlCommand cmd = new SqlCommand("select e.id,e.eventname,e.eventcategory,a.auditoriumname,CONVERT(VARCHAR(10), e.eventdate, 111) as eventdate,e.eventtime,e.fare,e.noofseats,a.address from eventtable e inner join auditoriumtable a on e.auditoriumid=a.id where e.id=" + passedid, con);
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                dtvevent.DataSource = dr;
+                dtvevent.DataBind();
+                con.Close();
+                int seats = Convert.ToInt32(dtvevent.Rows[4].Cells[1].Text);
+                DateTime eventdate = Convert.ToDateTime(dtvevent.Rows[2].Cells[1].Text);
+                if (eventdate < DateTime.Now || seats <= 0)
+                {
+                    btnreserve.Enabled = false;
+                    Session["EventId"] = null;
+                    lblmsg.Text = "reservation date for this event is completed or no seats are available ";
+                }
+               
+            }
+            catch
             {
-                btnreserve.Enabled = false;
-                Session["EventId"] = null;
-                lblmsg.Text = "reservation date for this event is completed or no seats are available ";
+                Response.Redirect("index.aspx");
             }
 
- }
+        }
 
         protected void btnreserve_Click(object sender, EventArgs e)
         {
