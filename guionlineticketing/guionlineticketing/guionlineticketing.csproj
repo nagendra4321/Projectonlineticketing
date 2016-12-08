@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="addlocation.aspx" />
+    <Content Include="adminhelp.aspx" />
     <Content Include="adminindex.aspx" />
     <Content Include="cancelreservation.aspx" />
     <Content Include="events.aspx" />
@@ -165,6 +166,13 @@
     </Compile>
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="adminhelp.aspx.cs">
+      <DependentUpon>adminhelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminhelp.aspx.designer.cs">
+      <DependentUpon>adminhelp.aspx</DependentUpon>
     </Compile>
     <Compile Include="adminindex.aspx.cs">
       <DependentUpon>adminindex.aspx</DependentUpon>

@@ -49,7 +49,7 @@
                                 <li><a href="addevent.aspx">Add Event</a></li>
                                 <li><a href="addlocation.aspx">Add Location</a></li>
                                 <li><a href="Contactus.aspx">Contact Us</a></li>
-                                <li><a href="help.aspx">Help</a></li>
+                                <li><a href="adminhelp.aspx">Help</a></li>
                             </ul>
                         </div>	
                     </nav>
