@@ -46,6 +46,19 @@
             </td>
             <td>&nbsp;</td>
         </tr>
+        <tr>
+        <%--<asp:CustomValidator ID="cvtextboxes" runat="server" ErrorMessage="Enter any input" ValidationGroup="search" ClientValidationFunction="Validate"
+         ValidateEmptyText="true"></asp:CustomValidator>
+            </tr>
+
+<script language="JavaScript">
+  function Validate(sender, args) {
+    var txt1 = document.getElementById("<%= txteventname.ClientID %>");
+    var txt2 = document.getElementById("<%= txtlocation.ClientID%>");
+      var txt3 = document.getElementById("<%= Calendar1.ClientID%>");
+      args.IsValid = (txt1.value != "") || (txt2.value != "") || (txt3.value != Calender1.MinValue.Date);
+  }
+</script>--%>
     </table>
     
     

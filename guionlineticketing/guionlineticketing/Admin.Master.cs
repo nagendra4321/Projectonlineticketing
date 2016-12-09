@@ -17,18 +17,22 @@ namespace guionlineticketing
 
         protected void btnlogout_Click(object sender, EventArgs e)
         {
+            //if the user clicks on logout redirect him to sign page
+            //clearing the session
+            Session.Clear();
             Response.Redirect("Signin.aspx");
         }
 
         protected void btn_signin_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Register.aspx");
+            //if the user clicks on  sign in button redirect him to sign in page
+            Response.Redirect("signin.aspx");
         }
 
         protected void btn_register_Click(object sender, EventArgs e)
         {
-            Session.Clear();
-            Response.Redirect("index.aspx");
+            //if the user clicks on register button redirect him to register page
+            Response.Redirect("register.aspx");
         }
     }
 }

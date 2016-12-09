@@ -26,24 +26,24 @@
                    <asp:TextBox ID="txtlocationname" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
-            <asp:TableRow runat="server" class="auto-style8">
+            <asp:TableRow runat="server" >
                 <asp:TableCell runat="server">Location Address:</asp:TableCell>
                 <asp:TableCell runat="server">
                     <asp:TextBox ID="txtlocationaddress" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
-            <asp:TableRow runat="server" class="auto-style8">
+            <asp:TableRow runat="server" >
                 <asp:TableCell runat="server">Number of Seats:</asp:TableCell>
                    <asp:TableCell runat="server">
                    <asp:TextBox ID="txtnoofseats" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
-            <asp:TableRow runat="server" class="auto-style8">
+            <asp:TableRow runat="server" >
                 <asp:TableCell runat="server">
                     <asp:Button ID="btnaddlocation" runat="server" Text="Add Location" OnClick="btnaddlocation_Click" />
                 </asp:TableCell>
             </asp:TableRow>
-                <asp:TableRow runat="server" class="auto-style8">
+                <asp:TableRow runat="server" >
                 <asp:TableCell runat="server">
                     <asp:Label ID="lblmsglocation" Text="" runat="server"></asp:Label>
                 </asp:TableCell>

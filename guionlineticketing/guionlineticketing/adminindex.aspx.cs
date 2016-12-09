@@ -11,6 +11,8 @@ namespace guionlineticketing
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //to show the appropriate buttons for the user if he is guest it shows
+            //signin and register if he is registered user and logged in it shows profile info and logout
             ((Button)Master.FindControl("btn_register")).Visible = false;
             if (Session["UserID"] != null && Session["UserID"].ToString() == "admin")
             {
@@ -25,6 +27,7 @@ namespace guionlineticketing
                 ((Button)Master.FindControl("btnlogout")).Visible = false;
                 Response.Redirect("Signin.aspx");
             }
+            //when the admin logs in this is used to display message for successfull login
             lblmsg.Text = "Succesfully logged in as " + Session["UserID"].ToString() + " .";
         }
     }
